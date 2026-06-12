@@ -33,3 +33,7 @@ _이탤릭(italic, 기울어진 글자)_
 ```python
 print("hello python!")
 ```
+
+### 링크와 이미지
+참고: [Markdown 공식 문서](https://www.markdownguide.org)
+이미지: ![파이썬 로고](https://www.python.org/static/img/python-logo.png)
