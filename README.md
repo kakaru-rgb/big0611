@@ -39,7 +39,13 @@ print("hello python!")
 이미지: ![파이썬 로고](https://www.python.org/static/img/python-logo.png)
 
 
-
+### 표
 | 이름 | 역할 | 비고 |
 |-|--|-----|
 | 홍길동 | 개발자 | 프론트 |
+
+
+## 할일 목록
+- [x] 프로젝트 셋업
+- [ ] 초기 UI 구현
+- [ ] 배포 준비
