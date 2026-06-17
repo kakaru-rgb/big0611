@@ -196,11 +196,13 @@ for day in range(20):
 사과 현재 재고: 40개
 '''
 # 상품 재고 관리 시스템
+# 1. 초기 재고 설정: '사과': 50개, '바나나': 30개, '오렌지': 25개로 시작
 inventory = {
     '사과': 50,
     '바나나': 30,
     '오렌지': 25
 }
+
 # 새 상품 추가
 inventory['포도'] = 40
 print("포도 재고 추가 완료")
@@ -208,6 +210,7 @@ print("포도 재고 추가 완료")
 # 재고 현황 출력
 print("=== 현재 재고 현황 ===")
 for product, quantity in inventory.items():
+    # print(f'문자열 {표현식}')
     print(f"{product}: {quantity}개")
 
 # 특정 상품 재고 확인
@@ -223,7 +226,8 @@ for product, quantity in inventory.items():
     if quantity < 30:
         print(f"{product}: {quantity}개(재고 부족)")
 
-# 상품 판매 시재고 차감
+# 상품 판매 시 재고 차감
+# 
 product_name = "사과"
 sale_cnt = 10
 inventory[product_name] = inventory[product_name] - sale_cnt
