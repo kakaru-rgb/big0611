@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* reset  */
+/* reset */
 * {
     box-sizing: border-box;
 }
@@ -8,7 +8,8 @@ body,h1,h2,h3,p,ul {
 }
 ul {
     padding: 0;
+    list-style: none;
 }
 body {
-    background: lightsalmon;
+    background: silver;
 }

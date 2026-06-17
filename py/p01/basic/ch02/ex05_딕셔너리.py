@@ -1,21 +1,22 @@
-#딕셔너리(dict)
+# 딕셔너리(dict)
 '''
 이름 = {
     '키': 값,
-    'Key': value
+    'key': value
     ...
 }
 '''
 # 생성
 my_dict = {
-    "name":"헤리",
-    "age": 27,
-    "height": 190,
-    "weight": 99.9
+    'name': '헤리',
+    'age': 27,
+    'height': 190,
+    'weight': 99.9
 }
+
 print(my_dict)
 
-# 아이템 선택
+# 선택
 print(my_dict.keys())
 print(my_dict['age'])
 
@@ -28,18 +29,21 @@ my_dict.update({'weight': 100})
 print(my_dict)
 
 # 추가
-my_dict.update({'address':'Busan'})
+my_dict.update({'address': '부산'})
 print(my_dict)
 
 # 삭제
-my_dict.popitem()   # 마지막 아이템 삭제
+# 딕셔너리.popitem(): 마지막 아이템 삭제
+my_dict.popitem()
 print(my_dict)
 
-my_dict.pop('age')  # 아이템 선택 삭제(나이 선택)
+# 딕셔너리.pop(키)
+my_dict.pop('age')
 print(my_dict)
 
-my_dict.clear() # 전부 삭제
+# 딕셔너리.clear()
+my_dict.clear()
 print(my_dict)
 
 del my_dict
-# print(my_dict) *에러*
+# print(my_dict)
