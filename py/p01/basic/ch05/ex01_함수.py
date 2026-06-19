@@ -120,7 +120,7 @@ print(calculator('+', 200, 300))
 print(calculator('*', 50, 7))
 print(calculator('?', 89, 20))
 
-# 매개변수에 초기값 지정
+# 디폴트인자: 매개변수에 초기값 지정
 def print_weight(height, man=True):
     weight = 0
     if man:
@@ -133,3 +133,13 @@ print_weight(180)
 # 기본값 대신 True가 man에 전달
 print_weight(170, True)
 print_weight(170, False)
+
+# 에러: 초기값이 있는 매개변수는 마지막에 기록
+def print_weight(man=True, height):
+    weight = 0
+    if man:
+        # weight = height
+        weight = height - 100
+    else:
+        weight = (height - 100) * 0.9
+    print('권장 체중은 {}kg 입니다'.format(weight))
