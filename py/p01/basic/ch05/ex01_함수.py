@@ -135,11 +135,41 @@ print_weight(170, True)
 print_weight(170, False)
 
 # 에러: 초기값이 있는 매개변수는 마지막에 기록
-def print_weight(man=True, height):
-    weight = 0
-    if man:
-        # weight = height
-        weight = height - 100
-    else:
-        weight = (height - 100) * 0.9
-    print('권장 체중은 {}kg 입니다'.format(weight))
+# def print_weight(man=True, height):
+#     weight = 0
+#     if man:
+#         # weight = height
+#         weight = (height - 100) * 0.5
+#     else:
+#         weight = (height - 100) * 0.85
+#     print('권장 체중은 {}kg 입니다'.format(weight))
+# SyntaxError: non-default argument follows default argument
+
+
+# 가변 인자(*args)
+def print_numbers(*args):
+    print(type(args))
+    result = 0
+    for num in args:
+        result += num
+    return result
+
+print(print_numbers(1, 2, 3))
+print(print_numbers(2, 4, 6, 8, 10))
+
+
+
+
+def celsius_to_fahrenheit(celsius):
+    """섭씨를 화씨로 변환하는 함수"""
+    fahrehiet = (celsius * 9/5) + 32
+    return fahrehiet
+
+celsius_temp = 25
+fahrenheit_temp = celsius_to_fahrenheit(celsius_temp)
+print(f'섭씨 {celsius_temp}도는 화씨 {fahrenheit_temp}도입니다.')
+
+celsius_temp = 12.2
+fahrenheit_temp = celsius_to_fahrenheit(celsius_temp)
+# .2F
+print(f'섭씨 {celsius_temp}도는 화씨 {fahrenheit_temp}도입니다.')
