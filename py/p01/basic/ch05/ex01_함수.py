@@ -173,3 +173,5 @@ celsius_temp = 12.2
 fahrenheit_temp = celsius_to_fahrenheit(celsius_temp)
 # .2F
 print(f'섭씨 {celsius_temp}도는 화씨 {fahrenheit_temp}도입니다.')
+
+
