@@ -164,6 +164,16 @@ for dan in range(2, 10):
     
     print()  # 단 사이에 빈 줄 출력
 
+# 구구단 가로 표시
+for dan in range(2, 10):
+    print(f"{dan}단", end="\t")
+print()
+
+for num in range(1, 10):
+    for dan in range(2, 10):
+        print(f"{dan}x{num}={dan*num}", end="\t")
+    print()
+
 
 # 학습 스케줄 출력 프로그램
 bookmark = 0
@@ -177,7 +187,7 @@ for day in range(20):
 # 다음 기능을 모두 포함한 상품 재고 관리 시스템을 작성하시오.
 '''
 1. 초기 재고 설정: '사과': 50개, '바나나': 30개, '오렌지': 25개로 시작
-2. 상품 관리 기능: 새 상품 추가(포토 40개 추가), 기존 상품 재고 수정, 상품 삭제
+2. 상품 관리 기능: 새 상품 추가(포도 40개 추가), 기존 상품 재고 수정, 상품 삭제
 3. 재고 조회 기능: 전체 재고 현황 출력, 특정 상품 재고 확인, 재고 부족 상품 찾기(30개 미만)
 4. 재고 변경 기능: 상품 판매 시재고 차감, 상품 입고 시 재고 증가, 재고 부족 시 경고 메시지
 '''
@@ -203,6 +213,7 @@ inventory = {
     '오렌지': 25
 }
 
+# 2. 상품 관리 기능: 새 상품 추가(포도 40개 추가), 기존 상품 재고 수정, 상품 삭제
 # 새 상품 추가
 inventory['포도'] = 40
 print("포도 재고 추가 완료")
@@ -221,13 +232,14 @@ else:
     print(f"{product_name} 재고: 0개")
 
 # 재고 부족 상품 찾기
+# 3. 재고 조회 기능: 전체 재고 현황 출력, 특정 상품 재고 확인, 재고 부족 상품 찾기(30개 미만)
 print("=== 재고 부족 상품 ===")
 for product, quantity in inventory.items():
     if quantity < 30:
         print(f"{product}: {quantity}개(재고 부족)")
 
-# 상품 판매 시 재고 차감
-# 
+# 상품 판매시 재고 차감
+# 4. 재고 변경 기능: 상품 판매 시 재고 차감, 상품 입고 시 재고 증가, 재고 부족 시 경고 메시지
 product_name = "사과"
 sale_cnt = 10
 inventory[product_name] = inventory[product_name] - sale_cnt

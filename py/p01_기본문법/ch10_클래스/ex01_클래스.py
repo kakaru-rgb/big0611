@@ -9,13 +9,14 @@ class Character:
     def take_damage(self, damage):
         self.hp -= damage
         print(f"[{self.name}]이(가) {damage}의 피해를 입었습니다! (남은 HP: {self.hp})")
+
 # 객체 생성
 # 1. 서로 다른 데이터(이름, 체력)를 가진 객체 2개 생성
 warrior = Character("전사", 100)
 wizard = Character("마법사", 60)
 
 # 2. 각 객체의 속성(데이터) 접근
-# 객체.속성()
+# 객체.속성
 print(warrior.name)  # 출력: 전사
 print(wizard.hp)     # 출력: 60
 
