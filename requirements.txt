@@ -4,10 +4,15 @@ yfinance
 seaborn
 matplotlib
 plotly
+jupytext
 nbformat
 streamlit
+streamlit-autorefresh
 requests
 beautifulsoup4
+lxml
 selenium
+python-dotenv
+openpyxl
 scikit-learn
 tensorflow
